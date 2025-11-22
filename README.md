@@ -54,11 +54,11 @@ Abre una **terminal** en la carpeta del proyecto y ejecuta el comando **`mvn spr
 
 ### 1️⃣ Obtener un Pilar por ID
 
-#### **<span style="color: #06402B;">GET</span> `/api/pilares/{id}`**
+**GET `/api/pilares/{id}`**
 
 ![Ejemplo](https://i.imgur.com/yvgPeN5.png)
 
-##### ✔ Response 200
+**✔ Response 200**
 ```json
 {
     "id": 1,
@@ -69,7 +69,7 @@ Abre una **terminal** en la carpeta del proyecto y ejecuta el comando **`mvn spr
 }
 ```
 
-##### ❌ Response 404
+**❌ Response 404**
 ```json
 {
     "timestamp": "...",
@@ -79,11 +79,11 @@ Abre una **terminal** en la carpeta del proyecto y ejecuta el comando **`mvn spr
 
 ### 2️⃣ Registrar o actualizar posición de un Pilar
 
-#### **<span style="color:#BA8E23;">POST</span> `/api/pilares/actualizar-posicion`**
+**POST `/api/pilares/actualizar-posicion`**
 
 ![Ejemplo](https://i.imgur.com/qz4Ur6C.png)
 
-##### 📨 Request
+**📨 Request**
 ```json
 {
     "pilarId": 1,
@@ -93,7 +93,7 @@ Abre una **terminal** en la carpeta del proyecto y ejecuta el comando **`mvn spr
 }
 ```
 
-##### ✔ Response 201
+**✔ Response 201**
 ```json
 {
     "mensaje": "Posición actualizada exitosamente.",
@@ -107,7 +107,7 @@ Abre una **terminal** en la carpeta del proyecto y ejecuta el comando **`mvn spr
 }
 ```
 
-##### ❌ Response 400
+**❌ Response 400**
 ```json
 {
     "timestamp": "...",
@@ -115,7 +115,7 @@ Abre una **terminal** en la carpeta del proyecto y ejecuta el comando **`mvn spr
 }
 ```
 
-##### ❌ Response 404
+**❌ Response 404**
 ```json
 {
     "timestamp": "...",
@@ -125,11 +125,11 @@ Abre una **terminal** en la carpeta del proyecto y ejecuta el comando **`mvn spr
 
 ### 3️⃣ Registrar mensaje fragmentado
 
-#### **<span style="color:#BA8E23;">POST</span> `/api/mensajes`**
+**POST `/api/mensajes`**
 
 ![Ejemplo](https://i.imgur.com/C7Ymz4o.png)
 
-##### 📨 Request
+**📨 Request**
 ```json
 {
     "pilarId": 2,
@@ -137,7 +137,7 @@ Abre una **terminal** en la carpeta del proyecto y ejecuta el comando **`mvn spr
 }
 ```
 
-##### ✔ Response 201
+**✔ Response 201**
 ```json
 {
     "id": 1,
@@ -150,18 +150,18 @@ Abre una **terminal** en la carpeta del proyecto y ejecuta el comando **`mvn spr
 
 ### 4️⃣ Reconstruir mensaje
 
-#### **<span style="color:#00008B;">PUT</span> `/api/mensajes/{id}/reconstruir`**
+**PUT `/api/mensajes/{id}/reconstruir`**
 
 ![Ejemplo](https://i.imgur.com/kRU7fxG.png)
 
-##### 📨 Request
+**📨 Request**
 ```json
 {
     "contenidoReconstruido": "Muzan apareció al norte."
 }
 ```
 
-##### ✔ Response 200
+**✔ Response 200**
 ```json
 {
     "id": 1,
@@ -174,11 +174,11 @@ Abre una **terminal** en la carpeta del proyecto y ejecuta el comando **`mvn spr
 
 ### 5️⃣ Triangulación — estimar ubicación de Muzan
 
-#### **<span style="color: #06402B;">GET</span> `/api/inteligencia/triangulacion`**
+**GET `/api/inteligencia/triangulacion`**
 
 ![Ejemplo](https://i.imgur.com/jr6q1hE.png)
 
-##### ✔ Response 200
+**✔ Response 200**
 ```json
 {
     "descripcion": "Alta probabilidad de presencia demoníaca cerca del punto calculado.",
@@ -192,11 +192,11 @@ Abre una **terminal** en la carpeta del proyecto y ejecuta el comando **`mvn spr
 
 ### 6️⃣ Obtener todos los Pilares
 
-#### **<span style="color: #06402B;">GET</span> `/api/pilares`**
+**GET `/api/pilares`**
 
 ![Ejemplo](https://i.imgur.com/AVo5eBg.png)
 
-##### ✔ Response 200
+**✔ Response 200**
 ```json
 [
     {
@@ -225,11 +225,11 @@ Abre una **terminal** en la carpeta del proyecto y ejecuta el comando **`mvn spr
 
 ### 7️⃣ Obtener todos los mensajes
 
-#### **<span style="color: #06402B;">GET</span> `/api/mensajes`**
+**GET `/api/mensajes`**
 
 ![Ejemplo](https://i.imgur.com/3MoiNmo.png)
 
-##### ✔ Response 200
+**✔ Response 200**
 ```json
 [
     {
@@ -248,7 +248,7 @@ Abre una **terminal** en la carpeta del proyecto y ejecuta el comando **`mvn spr
     }
 ]
 ```
-##### ❌ Response 404
+**❌ Response 404**
 ```json
 {
     "mensaje": "No hay mensajes registrados.",
